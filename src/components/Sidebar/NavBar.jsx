@@ -37,7 +37,7 @@ function NavBar() {
                 <ul className="w-full">
                     <li className="bg-[#44257A] w-full h-[95px] flex justify-start items-center rounded-b-lg ">
                     <Link to="#" className="flex items-start">
-                        <h2 className='pl-[16px] pr-[32px] h-[60px] text-[#F3F3F3] text-left text-[14px]'>Diferença e Enfrentamento Profissionais nas Desigualdades Sociais</h2>
+                        <h2 className='font-normal  pl-[16px] pr-[32px] h-[60px] text-[#F3F3F3] text-left text-[14px]'>Diferença e Enfrentamento Profissionais nas Desigualdades Sociais</h2>
                         <AiIcons.AiOutlineClose onClick={showSidebar} className='w-[60px] h-[60px] text-white cursor-pointer pr-[16px]' />
                     </Link>
                     </li>

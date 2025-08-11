@@ -18,7 +18,7 @@ const DropdownMenu = ({ module }) => {
         <div key={index} className="mb-2">
           <div
             onClick={() => toggleModule(index)}
-            className={`w-full text-left text-[14px] py-[16px] px-[16px] transition flex justify-between items-center ${openIndex === index ? "" : "border-b"} border-gray-300`}
+            className={`font-semibold w-full text-left text-[14px] py-[16px] px-[16px] transition flex justify-between items-center ${openIndex === index ? "" : "border-b"} border-gray-300`}
             >
             {mod.title}
             <FontAwesomeIcon icon={openIndex === index ? faChevronUp : faChevronDown} className="ml-2" />
