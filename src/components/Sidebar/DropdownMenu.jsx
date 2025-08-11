@@ -13,7 +13,7 @@ const DropdownMenu = ({ module }) => {
   };
 
   return (
-    <div className="w-full text-black py-[16px]">
+    <div className="w-full text-black ">
       {module.map((mod, index) => (
         <div key={index} className="mb-2">
           <div
@@ -25,8 +25,8 @@ const DropdownMenu = ({ module }) => {
           </div>
 
           {openIndex === index && (
-            <div className="border-b border-gray-300 rounded-md mt-2 p-4">
-              <ul className="space-y-2 text-left text-[14px] text-[#0C1E33]">
+            <div className="border-b border-gray-300 rounded-md mt-2">
+              <ul className="ps-4 space-y-2 text-left text-[14px] text-[#0C1E33]">
                 {mod.items.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
@@ -37,9 +37,9 @@ const DropdownMenu = ({ module }) => {
                   {SidebarData.map((item, i) => {
                     const isActive = location.pathname === item.path;
                     return (
-                      <li key={i} className={`${item.cName} ${isActive ? 'bg-[#E5D9FA]' : 'bg-white'}`}>
+                      <li key={i} className={`${item.cName} ${isActive ? 'bg-[#F4F2FF]' : 'bg-white'}`}>
                         <a href={item.path} className="flex items-center ml-4 text-left text-[14px]">
-                          <span className="ml-4 text-[#0C1E33] text-left text-[14px]">{item.title}</span>
+                          <span className="text-[#0C1E33] text-left text-[14px]">{item.title}</span>
                         </a>
                       </li>
                     );
