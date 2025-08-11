@@ -18,11 +18,12 @@ const DropdownMenu = ({ module }) => {
         <div key={index} className="mb-2">
           <div
             onClick={() => toggleModule(index)}
-            className={`w-full text-left text-[14px] py-[16px] px-[16px] transition flex justify-between items-center ${openIndex === null ? "border-y" : "border-t"} border-gray-300`}
-          >
+            className={`w-full text-left text-[14px] py-[16px] px-[16px] transition flex justify-between items-center ${openIndex === index ? "" : "border-b"} border-gray-300`}
+            >
             {mod.title}
             <FontAwesomeIcon icon={openIndex === index ? faChevronUp : faChevronDown} className="ml-2" />
           </div>
+
 
           {openIndex === index && (
             <div className="border-b border-gray-300 rounded-md mt-2">
