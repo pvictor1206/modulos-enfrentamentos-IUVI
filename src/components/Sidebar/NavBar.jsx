@@ -3,10 +3,27 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SideBar';
+import DropdownMenu from './DropdownMenu';
+
+
+const modules = [
+    {
+        title: "Módulo 1",
+        items: [
+            "Metodologia de Estudo na Educação a Distância",
+        ]
+    },
+    {
+        title: "Cronograma",
+        items: [
+            "EM BREVE",
+        ]
+    },
+]
 
 
 function NavBar() {
-    const [sidebar, setSidebar] = useState(false)
+    const [sidebar, setSidebar] = useState(true)
     const showSidebar = () => setSidebar(!sidebar)
 
     return (
@@ -24,13 +41,17 @@ function NavBar() {
                         <AiIcons.AiOutlineClose onClick={showSidebar} className='w-[60px] h-[60px] text-white cursor-pointer pr-[16px]' />
                     </Link>
                     </li>
+                    <li className='flex justify-start items-center'>
+                        <DropdownMenu module={modules} ></DropdownMenu>
+                    </li>
+                    {/*
                     {SidebarData.map((item, index) => (
                     <li key={index} className={item.cName}>
                         <Link to={item.path} className="flex items-center ml-4">
                         <span className="ml-4 text-[#0C1E33]">{item.title}</span>
                         </Link>
                     </li>
-                    ))}
+                    ))}*/}
                 </ul>
             </nav>
 
