@@ -16,18 +16,18 @@ function NavBar() {
                     <FaIcons.FaBars onClick={showSidebar} />
                 </Link>
             </div>
-            <nav className={`bg-[#060b26] w-[250px] h-screen flex flex-col justify-start items-start fixed top-0 transition-all duration-[450ms] ${sidebar ? "left-0" : "-left-full"}`}>
+            <nav className={`bg-[#fff] w-[298px] h-screen flex flex-col justify-start items-start fixed top-0 transition-all duration-[450ms] bg-[#C9BFEF] shadow-xl/20 ${sidebar ? "left-0" : "-left-full"}`}>
                 <ul className="w-full">
-                    <li className="bg-[#060b26] w-full h-[80px] flex justify-start items-center">
-                    <Link to="#" className="ml-4 text-xl p-4">
-                        <AiIcons.AiOutlineClose onClick={showSidebar} />
+                    <li className="bg-[#44257A] w-full h-[95px] flex justify-start items-center rounded-b-lg ">
+                    <Link to="#" className="flex items-start">
+                        <h2 className='pl-[16px] pr-[32px] h-[60px] text-[#F3F3F3] text-left text-[14px]'>Diferença e Enfrentamento Profissionais nas Desigualdades Sociais</h2>
+                        <AiIcons.AiOutlineClose onClick={showSidebar} className='w-[60px] h-[60px] text-white cursor-pointer pr-[16px]' />
                     </Link>
                     </li>
                     {SidebarData.map((item, index) => (
                     <li key={index} className={item.cName}>
                         <Link to={item.path} className="flex items-center ml-4">
-                        {item.icon}
-                        <span className="ml-4">{item.title}</span>
+                        <span className="ml-4 text-[#0C1E33]">{item.title}</span>
                         </Link>
                     </li>
                     ))}

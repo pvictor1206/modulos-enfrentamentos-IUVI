@@ -2,7 +2,7 @@
 function Module_01_03() {
   return(
     <div>
-      <h1>Parte 03</h1>
+      <h1>Metodologia de Estudo na Educação a Distância - #1.3</h1>
     </div>
   )
 }
