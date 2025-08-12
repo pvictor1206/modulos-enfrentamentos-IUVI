@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from 'react-router-dom';
@@ -22,8 +21,7 @@ const modules = [
 ]
 
 
-function NavBar() {
-    const [sidebar, setSidebar] = useState(true)
+function NavBar({ sidebar, setSidebar }) {
     const showSidebar = () => setSidebar(!sidebar)
 
     return (

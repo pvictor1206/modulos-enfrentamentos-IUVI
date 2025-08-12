@@ -9,7 +9,6 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar />
         <Routes>
           <Route path="/" Component={Module_01_01}/>
           <Route path="/module_01_02" Component={Module_01_02}/>
