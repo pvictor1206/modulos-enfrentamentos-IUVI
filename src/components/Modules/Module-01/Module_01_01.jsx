@@ -1,19 +1,37 @@
-// Module_01_01.js
+// Module_01_01.jsx
 import MainLayout from "../../Sidebar/MainLayout";
+import { AiOutlineRight } from "react-icons/ai"; // topo do arquivo
 
 function Module_01_01() {
-  return(
+  return (
     <MainLayout>
-      <div className="text-left p-4">
-        <h1 className="text-2xl font-bold mb-4">Metodologia de Estudo na Educação a Distância - #1.1</h1>
-        <div className="space-y-4">
-          <p>Oi pessoas, vamos conversar um pouco sobre algumas peculiaridades que os discentes e até mesmo os docentes precisam se preocupar ao trabalhar ensino, aprendizagem e avaliação em um modelo de estudo que chamamos educação à distância – EaD ou um outro modelo que chamamos ensino remoto.</p>
-          <p>Pode não parecer, mas estas 2 modalidades têm diferenças. Afinal, em geral, remoto é algo distante. Não vamos nos focar nisso agora, mas procurem compreender que EaD é muito mais amplo e contém o ensino remoto além de muitas outras técnicas.</p>
-          <p>Antes de começarmos de fato a trabalhar com os nossos conteúdos pedimos a vocês que respondam o questionário que está no link disponibilizado abaixo. O que nós estamos procurando é compreender os conhecimentos prévios de vocês e não haverão respostas certas ou erradas.</p>
+      <div className="pr-8"> {/* padding opcional à direita */}
+        <h1 className="title-module">
+          Metodologia de Estudo na Educação a Distância - #1.1
+        </h1>
+
+        <div className="Line-After-Title" />
+        <div className="mt-3 ml-auto w-full max-w-[460px] pt-2">
+          <div className="flex items-center gap-4">
+            <div className="">
+              <div className="text-[14px] font-semibold text-right">Próximo</div>
+              <div className="text-[14px]">
+                Metodologia de Estudo na Educação a Distância - #1.2
+              </div>
+            </div>
+
+            <img
+              src="/Task List Pin Streamline Ultimate Regular - Free.png" /* arquivo em /public */
+              alt=""
+              className="w-[40px] h-[40px]"
+            />
+            <AiOutlineRight className="w-[20px] h-[20px] text-slate-500" />
+          </div>
         </div>
+        <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
       </div>
     </MainLayout>
-  )
+  );
 }
 
 export default Module_01_01;

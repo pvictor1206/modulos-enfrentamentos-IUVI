@@ -10,4 +10,9 @@
   }
 }
 
+@layer components {
+  .title-module { @apply text-left text-[25px] font-semibold; }
+  .Line-After-Title { @apply h-2 bg-[#C9BFEF] rounded-b-lg mt-1 w-[calc(95vw-var(--content-left)-32px)]; }
+}
+
 
