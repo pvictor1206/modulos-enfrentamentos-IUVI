@@ -13,8 +13,8 @@ function Module_01_01() {
 
         <div className="Line-After-Title" /></div>
 
-        <div className="hidden md:block">
-            <div className="mt-3 ml-auto w-full max-w-[460px] pt-2">
+        <div className="hidden md:block pr-[35px]">
+            <div className="mt-3 ml-auto w-full max-w-[460px] pt-[5px]">
             <div className="flex items-center gap-4">
               <div className="">
                 <div className="text-[14px] font-semibold text-right">Próximo</div>
@@ -34,7 +34,7 @@ function Module_01_01() {
           <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
         </div>
 
-        <p className="text-left">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+        <p className="text-justify lg:pr-[180px] lg:pl-[170px]">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
