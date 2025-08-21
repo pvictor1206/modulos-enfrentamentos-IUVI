@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from 'react-router-dom';
-import { SidebarData } from './SideBar';
+import { SidebarData } from './Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,7 +19,7 @@ const DropdownMenu = ({ module }) => {
           <div
             onClick={() => toggleModule(index)}
             className={`font-semibold w-full text-left text-[14px] py-[16px] px-[16px] transition flex justify-between items-center ${openIndex === index ? "" : "border-b"} border-gray-300`}
-            >
+          >
             {mod.title}
             <FontAwesomeIcon icon={openIndex === index ? faChevronUp : faChevronDown} className="ml-2" />
           </div>
@@ -38,7 +38,7 @@ const DropdownMenu = ({ module }) => {
                   {SidebarData.map((item, i) => {
                     const isActive = location.pathname === item.path;
                     return (
-                      <li key={i} className={`${item.cName} ${isActive ? 'bg-[#F4F2FF] border border-[#C9BFEF] border-l-[5px] border-l-[#C9BFEF]'  : 'bg-white'}`}>
+                      <li key={i} className={`${item.cName} ${isActive ? 'bg-[#F4F2FF] border border-[#C9BFEF] border-l-[5px] border-l-[#C9BFEF]' : 'bg-white'}`}>
                         <a href={item.path} className="flex items-center ml-4 text-left text-[14px]">
                           <span className="text-[#0C1E33] text-left text-[14px]">{item.title}</span>
                         </a>
