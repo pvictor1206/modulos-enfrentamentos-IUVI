@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import { SidebarData } from './Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 
 const DropdownMenu = ({ module }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -35,16 +37,26 @@ const DropdownMenu = ({ module }) => {
 
               {mod.title.includes("Módulo") && (
                 <ul className="mt-4 space-y-2">
+                  
                   {SidebarData.map((item, i) => {
                     const isActive = location.pathname === item.path;
+
                     return (
-                      <li key={i} className={`${item.cName} ${isActive ? 'bg-[#F4F2FF] border border-[#C9BFEF] border-l-[5px] border-l-[#C9BFEF]' : 'bg-white'}`}>
-                        <a href={item.path} className="flex items-center ml-4 text-left text-[14px]">
+                      <li
+                        key={i}
+                        className={`${item.cName} ${
+                          isActive
+                            ? 'bg-[#F4F2FF] border border-[#C9BFEF] border-l-[5px] border-l-[#C9BFEF]'
+                            : 'bg-white'
+                        }`}
+                      >
+                        <Link to={item.path} className="flex items-center ml-4 text-left text-[14px]">
                           <span className="text-[#0C1E33] text-left text-[14px]">{item.title}</span>
-                        </a>
+                        </Link>
                       </li>
                     );
                   })}
+
                 </ul>
               )}
             </div>
