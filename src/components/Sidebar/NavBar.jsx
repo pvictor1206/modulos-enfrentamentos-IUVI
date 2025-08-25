@@ -25,9 +25,8 @@ function NavBar({ sidebar, setSidebar }) {
 
   return (
     <>
-      {/* Botão lateral fixo — escondido no mobile quando o menu está aberto */}
       <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-        <div className="flex items-center justify-between px-4 py-2">
+        <div className="py-[15px] flex items-center justify-between px-4 md:px-[75px]">
           <Link to="#" onClick={showSidebar} className="flex items-center gap-2">
             <FaIcons.FaBars className="w-5 h-5 text-[#44257A]" />
             <span className="text-[#44257A] font-semibold">Módulo 01</span>
@@ -35,10 +34,6 @@ function NavBar({ sidebar, setSidebar }) {
         </div>
         <ProgressBar porcentagem={progresso} />
       </div>
-
-      
-
-
 
 
       {/* Backdrop apenas no mobile */}
