@@ -22,4 +22,16 @@ export const SidebarData = [
     icon: <AiIcons.AiFillHome />,
     cName: cNameText,
   },
+  {
+    title: '#1.4',
+    path: '/module_01_04',
+    icon: <AiIcons.AiFillHome />,
+    cName: cNameText,
+  },
+  {
+    title: '#1.5',
+    path: '/module_01_05',
+    icon: <AiIcons.AiFillHome />,
+    cName: cNameText,
+  },
 ];

@@ -2,7 +2,7 @@
 import MainLayout from "../../Sidebar/MainLayout";
 import { AiOutlineRight } from "react-icons/ai"; // topo do arquivo
 import MobileBottomBar from "../../Mobile/MobileBottomBar";
-import conteudoJSON from '../../../assets/conteudo_textos.json';
+import conteudoJSON from '../../../assets/conteudo_textos_01.json';
 import { Link } from 'react-router-dom';
 
 
@@ -39,14 +39,15 @@ function Module_01_01() {
         <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
       </div>
 
-      <div>
-        <h2>Introdução</h2>
-      </div>
-
-        <p className="text-justify lg:pr-[180px] lg:pl-[170px]">
+        <p className="text-justify lg:pr-[18%] lg:pl-[170px]">
+          <h2 className="text-left font-semibold text-[20px] py-[50px]" >Introdução</h2>  
           {conteudoJSON.paragrafo.map((texto, index) => (
-            <span key={index}>{texto}<br /><br /></span>
-          ))}
+              <p
+                key={index}
+                className="text-base leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: texto }}
+              />
+            ))}
         </p>
 
       {/* tab bar só no mobile */}
