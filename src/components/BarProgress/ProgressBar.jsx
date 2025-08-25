@@ -3,7 +3,8 @@ import React from "react";
 
 function ProgressBar({ porcentagem }) {
   return (
-    <div className="mt-4 pr-[2%]">
+    
+  <div className="mt-4 pr-[0%] md:pr-[1.7%]">
       <div className="w-full bg-gray-200 rounded-full h-2.5">
         <div
           className="bg-[#C9BFEF] h-2.5 rounded-full transition-all duration-300"

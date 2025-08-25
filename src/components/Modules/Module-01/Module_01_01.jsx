@@ -8,7 +8,7 @@ import ProgressBar from "../../BarProgress/ProgressBar";
 
 
 function Module_01_01() {
-  const progresso = 40;
+  const progresso = 0;
   return (
     <MainLayout>
       <div className="pr-8"> {/* padding opcional à direita */}
