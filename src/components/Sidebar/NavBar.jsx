@@ -3,11 +3,14 @@ import * as AiIcons from "react-icons/ai";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
+import ProgressBar from "../BarProgress/ProgressBar";
 
 const modules = [
   { title: "Módulo 1", items: ["Metodologia de Estudo na Educação a Distância"] },
   { title: "Cronograma", items: ["EM BREVE"] },
 ];
+
+const progresso = 50;
 
 function NavBar({ sidebar, setSidebar }) {
   const showSidebar = () => setSidebar(!sidebar);
@@ -23,16 +26,19 @@ function NavBar({ sidebar, setSidebar }) {
   return (
     <>
       {/* Botão lateral fixo — escondido no mobile quando o menu está aberto */}
-      
-      <div className={`fixed top-0 left-0 w-full bg-white shadow-md  z-50 ${sidebar ? "hidden" : "block"}`}>
-            <div className="flex items-center justify-between px-4 py-2">
-              <Link to="#" onClick={showSidebar} className="flex items-center gap-2">
-                <FaIcons.FaBars className="w-5 h-5 text-[#44257A]" />
-                <span className="text-[#44257A] font-semibold">Módulo 01</span>
-              </Link>
-              {/* Você pode adicionar mais itens aqui, como logo, perfil, etc. */}
-            </div>
+      <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div className="flex items-center justify-between px-4 py-2">
+          <Link to="#" onClick={showSidebar} className="flex items-center gap-2">
+            <FaIcons.FaBars className="w-5 h-5 text-[#44257A]" />
+            <span className="text-[#44257A] font-semibold">Módulo 01</span>
+          </Link>
         </div>
+        <ProgressBar porcentagem={progresso} />
+      </div>
+
+      
+
+
 
 
       {/* Backdrop apenas no mobile */}

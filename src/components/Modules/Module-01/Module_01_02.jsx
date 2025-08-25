@@ -5,15 +5,12 @@ import { AiOutlineRight } from "react-icons/ai"; // topo do arquivo
 import { Link } from 'react-router-dom';
 
 import MobileBottomBar from "../../Mobile/MobileBottomBar";
-import conteudoJSON from '../../../assets/conteudo_textos_01.json';
 
 function Module_01_02() {
-  const progresso = 20;
 
   return (
     <MainLayout>
       <div className="pr-8"> {/* padding opcional à direita */}
-        <ProgressBar porcentagem={progresso} />
         <h1 className="text-left font-semibold text-[18px] md:text-[25px]">
           Metodologia de Estudo na Educação a Distância - #1.2
         </h1>
@@ -41,9 +38,6 @@ function Module_01_02() {
         </div>
         <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
       </div>
-
-  
-
 
 
       <MobileBottomBar to="/#" text="Próximo" />

@@ -9,7 +9,7 @@ import Module_01_05 from './components/Modules/Module-01/Module_01_05.jsx';
 
 function App() {
   return (
-    <div className="absolute top-0 left-0 p-4">
+    <div className="absolute top-0 left-0 p-4 pt-[50px]">
       {/* Rotas */}
       <Routes>
         <Route path="/" element={<Module_01_01 />} />
