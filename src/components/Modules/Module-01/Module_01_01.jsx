@@ -4,6 +4,12 @@ import { AiOutlineRight } from "react-icons/ai"; // topo do arquivo
 import MobileBottomBar from "../../Mobile/MobileBottomBar";
 import conteudoJSON from '../../../assets/conteudo_textos_01.json';
 import { Link } from 'react-router-dom';
+import QuestionnairePrompt from "../../QuestionnairePrompt/QuestionnairePrompt ";
+import ReferenceInfoBox from "../../ReferenceInfoBox/ReferenceInfoBox";
+import AccessLink from "../../AccessLink/AccessLink"
+import DropdownContent from "../../DropdownContent/DropdownContent";
+
+import gatoImg from '../../../assets/imgs/gato.png';
 
 function Module_01_01() {
   return (
@@ -42,17 +48,57 @@ function Module_01_01() {
         <h2 className="text-left font-semibold text-[20px] py-[25px] md:py-[50px]">
           Introdução
         </h2>
-          {conteudoJSON.paragrafo.map((texto, index) => (
+          {conteudoJSON.paragrafo_m01_01.map((texto, index) => (
               <p
                 key={index}
-                className="text-base leading-relaxed"
+                className="text-[16px] leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: texto }}
               />
             ))}
         </p>
 
+        <QuestionnairePrompt />
+          
+        <p className="text-justify lg:pr-[18%] lg:pl-[170px]">
+            {conteudoJSON.paragrafo_m01_02.map((texto, index) => (
+                  <p
+                    key={index}
+                    className="text-[16px] leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: texto }}
+                  />
+                ))}
+          </p>
+
+        
+        <ReferenceInfoBox />
+
+        <p className="text-justify lg:pr-[18%] lg:pl-[170px]">
+            {conteudoJSON.paragrafo_m01_03.map((texto, index) => (
+                  <p
+                    key={index}
+                    className="text-[16px] leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: texto }}
+                  />
+                ))}
+          </p>
+
+          <AccessLink />
+
+          
+          <DropdownContent
+                  title="Conteúdo 1"
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  imageUrl={gatoImg}
+                  altText="Gato fofo"
+          />
+
+
+
+        
+        
+
       {/* tab bar só no mobile */}
-      <MobileBottomBar to="/#" text="Próximo" />
+      {/*<MobileBottomBar to="/#" text="Próximo" />*/}
 
 
     </MainLayout>

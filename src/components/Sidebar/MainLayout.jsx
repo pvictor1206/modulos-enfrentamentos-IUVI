@@ -12,7 +12,7 @@ function MainLayout({ children }) {
       {/* mobile: ml-0; desktop: ml-[320px] quando aberto, ml-[57px] quando fechado */}
       <main
         style={{ '--content-left': sidebar ? '320px' : '57px' }}
-        className={`flex-1 transition-all duration-[450ms] ml-[19px] ${
+        className={`flex-1 transition-all duration-[450ms] px-[5px] ${
           sidebar ? 'md:ml-[320px]' : 'md:ml-[57px]'
         }`}
       >
