@@ -4,23 +4,27 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import ProgressBar from "../BarProgress/ProgressBar";
+import UseScrollProgress from "../BarProgress/useScrollProgress";
 
 const modules = [
   { title: "Módulo 1", items: ["Metodologia de Estudo na Educação a Distância"] },
   { title: "Cronograma", items: ["EM BREVE"] },
 ];
 
-const progresso = 50;
-
 function NavBar({ sidebar, setSidebar }) {
   const showSidebar = () => setSidebar(!sidebar);
+
+  // % de rolagem da página
+  const progresso = UseScrollProgress();
 
   // Bloqueia o scroll quando o menu está aberto (mobile)
   useEffect(() => {
     if (window.innerWidth < 768) {
       document.body.style.overflow = sidebar ? "hidden" : "";
     }
-    return () => (document.body.style.overflow = "");
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [sidebar]);
 
   return (
@@ -34,7 +38,6 @@ function NavBar({ sidebar, setSidebar }) {
         </div>
         <ProgressBar porcentagem={progresso} />
       </div>
-
 
       {/* Backdrop apenas no mobile */}
       <div

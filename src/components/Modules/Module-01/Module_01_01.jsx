@@ -8,6 +8,7 @@ import QuestionnairePrompt from "../../QuestionnairePrompt/QuestionnairePrompt "
 import ReferenceInfoBox from "../../ReferenceInfoBox/ReferenceInfoBox";
 import AccessLink from "../../AccessLink/AccessLink"
 import DropdownContent from "../../DropdownContent/DropdownContent";
+import UseScrollProgress from "../../BarProgress/useScrollProgress";
 
 import gatoImg from '../../../assets/imgs/gato.png';
 
