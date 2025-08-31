@@ -16,7 +16,7 @@ function Module_01_01() {
   return (
     <MainLayout>
       <div className="pr-8 pt-[40px]"> {/* padding opcional à direita */}
-        <h1 className="text-left font-semibold text-[18px] md:text-[25px]">
+        <h1 className="text-left font-semibold text-[20px] md:text-[25px]">
           Metodologia de Estudo na Educação a Distância - #1.1
         </h1>
 
@@ -58,7 +58,14 @@ function Module_01_01() {
             ))}
         </p>
 
-        <QuestionnairePrompt />
+        <QuestionnairePrompt
+          message={`É importantíssimo que vocês respondam esse questionário antes de
+            qualquer coleta de informações, consulta ou estudo sobre os temas que
+            vamos trabalhar.`}
+          buttonLabel="RESPONDER QUESTIONÁRIO"
+          href="#"
+        />
+
           
         <p className="text-justify lg:pr-[18%] lg:pl-[170px]">
             {conteudoJSON.paragrafo_m01_02.map((texto, index) => (
