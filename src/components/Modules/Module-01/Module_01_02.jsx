@@ -1,44 +1,111 @@
 import MainLayout from "../../Sidebar/MainLayout";
-import { AiOutlineRight } from "react-icons/ai"; // topo do arquivo
 import { Link } from 'react-router-dom';
+import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import MobileBottomBar from "../../Mobile/MobileBottomBar";
+import conteudoJSON from '../../../assets/conteudo_textos_02.json';
+import QuestionnairePrompt from "../../QuestionnairePrompt/QuestionnairePrompt ";
+import ReferenceInfoBox from "../../ReferenceInfoBox/ReferenceInfoBox";
+import ReferenceList from "../../ReferenceInfoBox/ReferenceList";
+import AccessLink from "../../AccessLink/AccessLink"
+import DropdownContent from "../../DropdownContent/DropdownContent";
+import UseScrollProgress from "../../BarProgress/useScrollProgress";
 
 function Module_01_02() {
 
   return (
     <MainLayout>
-      <div className="pr-8"> {/* padding opcional à direita */}
-        <h1 className="text-left font-semibold text-[18px] md:text-[25px]">
+      
+      <div className="pr-8 pt-[40px]"> {/* padding opcional à direita */}
+        <h1 className="text-left font-semibold text-[20px] md:text-[25px]">
           Metodologia de Estudo na Educação a Distância - #1.2
         </h1>
 
-        <div className="h-2 bg-[#C9BFEF] rounded-b-lg mt-1 w-[calc(96vw-var(--content-left)-32px)]" /></div>
-
-        <div className="hidden md:block pr-[2%]">
-          <div className="mt-3 ml-auto w-full max-w-[460px] pt-[5px]">
-            <div className="flex items-center gap-4">
-              <div className="">
-                <div className="text-[14px] font-semibold text-right">Próximo</div>
-                <div className="text-[14px]">
-                  Metodologia de Estudo na Educação a Distância - #1.3
-                </div>
+        <div className="h-2 bg-[#d6cfee] rounded-b-lg mt-1 w-[calc(52vw-var(--content-left)-32px)]" /></div>
+        
+        <div className="hidden md:flex justify-between items-center px-[2%] mt-4">
+          {/* Botão Voltar */}
+          <div className="flex items-center gap-4">
+            <Link to="/module_01_01">
+              <AiOutlineLeft className="w-[20px] h-[20px] text-slate-500" />
+            </Link>
+            <img
+              src="/Task List Pin Streamline Ultimate Regular - Free.png"
+              alt=""
+              className="w-[40px] h-[40px]"
+            />
+            <div>
+              <div className="text-[14px] font-semibold text-left">Voltar</div>
+              <div className="text-[14px]">
+                Metodologia de Estudo na Educação a Distância - #1.1
               </div>
-              <img
-                src="/Task List Pin Streamline Ultimate Regular - Free.png"
-                alt=""
-                className="w-[40px] h-[40px]"
-              />
-              <Link to='/module_01_03'>
-                      <AiOutlineRight className="w-[20px] h-[20px] text-slate-500" />
-              </Link>
-              
             </div>
           </div>
-          <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
+
+          {/* Botão Próximo */}
+          <div className="flex items-center gap-4">
+            <div className="text-right">
+              <div className="text-[14px] font-semibold">Próximo</div>
+              <div className="text-[14px]">
+                Metodologia de Estudo na Educação a Distância - #1.3
+              </div>
+            </div>
+            <img
+              src="/Task List Pin Streamline Ultimate Regular - Free.png"
+              alt=""
+              className="w-[40px] h-[40px]"
+            />
+            <Link to="/module_01_03_01">
+              <AiOutlineRight className="w-[20px] h-[20px] text-slate-500" />
+            </Link>
+          </div>
         </div>
 
+        <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
 
-      <MobileBottomBar to="/#" text="Próximo" />
+        <p className="text-justify lg:pr-[18%] lg:pl-[170px]">
+        <h2 className="text-left font-semibold text-[20px] py-[25px] md:py-[50px]">
+          Citações e Vídeos
+        </h2>
+          {conteudoJSON.paragrafo_m02_01.map((texto, index) => (
+              <p
+                key={index}
+                className="text-[16px] leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: texto }}
+              />
+            ))}
+        </p>
+
+        <ReferenceInfoBox
+          id="source-1"
+          quote={`"...Estatísticas recentes publicadas por National Center of Education Statistics indicam que o interesse e a matrícula em cursos online incluem todas as faixas etárias."`}
+          reference="Referência 1"
+          targetId="ref-1"
+        />
+
+        <ReferenceInfoBox
+          id="source-2"
+          quote={`"Ser alguém que pensa criticamente é parte daquilo que forma a pessoa que se desenvolve. ... Quando os professores, e quem está disposto a ajudar, trabalham desta maneira, estimulam o pensamento crítico. O pensamento crítico é complexo e frequentemente causa perplexidade pois requer a suspensão de crença ou abandono de conceitos aceitos anteriormente..."`}
+          reference="Referência 2"
+          targetId="ref-2"
+        />
+
+        <ReferenceList
+          headerOffset={72} // ajuste conforme a altura do seu header fixo
+          references={[
+            {
+              text:
+                "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
+              targetId: "ref-1",  
+              sourceId: "source-1" 
+            },
+            {
+              text:
+                "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
+              targetId: "ref-2",   
+              sourceId: "source-2"
+            },
+          ]}
+        />
 
     </MainLayout>
   );
