@@ -4,14 +4,18 @@ import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import MobileBottomBar from "../../Mobile/MobileBottomBar";
 import conteudoJSON from '../../../assets/conteudo_textos_03.json';
 import { Link } from 'react-router-dom';
-import QuestionnairePrompt from "../../QuestionnairePrompt/QuestionnairePrompt ";
-import ReferenceInfoBox from "../../ReferenceInfoBox/ReferenceInfoBox";
-import AccessLink from "../../AccessLink/AccessLink"
-import DropdownContent from "../../DropdownContent/DropdownContent";
-import UseScrollProgress from "../../BarProgress/useScrollProgress";
+import VideoEmbed from "../../Video/VideoEmbed";
+
 
 
 function Module_01_03_01() {
+  
+  const YT_VIDEO_1 = "w2xJ-mDgDdY";
+  const YT_VIDEO_2 = "hOSnloSlmzw";
+  const YT_VIDEO_3 = "nJmEuR67-Qo";
+  const YT_VIDEO_4 = "w4QsGJX6BCs";
+  const YT_VIDEO_5 = "E7ycfK_o6Po";
+
   return (
     <MainLayout>
       
@@ -68,13 +72,40 @@ function Module_01_03_01() {
           Tempo e Disciplina
         </h2>
           {conteudoJSON.paragrafo_m03_01.map((texto, index) => (
+            <div key={index}>
               <p
-                key={index}
                 className="text-[16px] leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: texto }}
               />
-            ))}
+
+              {/* Vídeo após o item 3 (index 2) */}
+              {index === 0 && (
+                <VideoEmbed videoId={YT_VIDEO_1} title="Educação a Distância" />
+              )}
+
+             {index === 1 && (
+                <VideoEmbed videoId={YT_VIDEO_2} title="Educação a Distância" />
+              )}
+
+              {index === 2 && (
+                <VideoEmbed videoId={YT_VIDEO_3} title="Prazos" />
+              )}
+
+              {index === 3 && (
+                <VideoEmbed videoId={YT_VIDEO_4} title="Respostas" />
+              )}
+
+              {index === 5 && (
+                <VideoEmbed videoId={YT_VIDEO_5} title="Responsabilidade" />
+              )}
+
+
+            </div>
+          ))}
         </p>
+        <br/><br/>
+        <br/><br/>
+        <br/><br/>
 
     </MainLayout>
   );

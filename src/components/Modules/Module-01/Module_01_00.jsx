@@ -57,6 +57,8 @@ function Module_01_00() {
             ))}
         </p>
 
+        <MobileBottomBar to="/module_01_01" text="Próximo" />
+
         {/*
 
         <QuestionnairePrompt

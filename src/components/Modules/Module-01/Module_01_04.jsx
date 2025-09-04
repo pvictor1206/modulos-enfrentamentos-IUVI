@@ -52,57 +52,55 @@ function Module_01_04() {
               </div>
             </div>
           </div>
-
-          
-
- 
         </div>
 
         <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
 
-        <p className="text-justify lg:pr-[18%] lg:pl-[170px]">
-          <h2 className="text-left font-semibold text-[20px] py-[25px] md:py-[50px]">
-            Diferenças Entre Alunos e Alunas Presenciais e EAD
-          </h2>
-        </p>
+        <div className="lg:pl-[20%]">
 
-        <div className="p-4">
-          <ComparisonTable
-            title="Diferenças Entre Alunos e Alunas Presenciais e EaD"
-            leftHeader="PRESENCIAL"
-            rightHeader="EaD"
-            rows={rows}
-            footnote="Texto da fonte/observação opcional."
-            className="my-1"
+            <div className="p-4">
+              <ComparisonTable
+                title="Diferenças Entre Alunos e Alunas Presenciais e EaD"
+                leftHeader="PRESENCIAL"
+                rightHeader="EaD"
+                rows={rows}
+                footnote="Texto da fonte/observação opcional."
+                className="my-1"
+              />
+          </div>
+
+          <br /><br />
+
+
+          <ReferenceInfoBox
+            id="source-4"
+            quote={`“O espaço na EaD está ligado ao fato de não ser necessária a utilização do mesmo espaço físico, de forma simultânea, por alunos, tutores e professores, para que os processos de ensino e de aprendizagem aconteçam. Os espaços de encontros se multiplicam e se subdividem. Professores, tutores e alunos comunicam-se em um ambiente de interação síncrona ou assíncrona, com a utilização de recursos tecnológicos, sem barreiras espaciais ou temporais. Um dos espaços mais utilizados em EaD é a sala de aula virtual, materializada pelo AVA. A presença do aluno se faz por meio das atividades e de estudos propostos pelo curso.“`}
+            reference="Referência 4"
+            targetId="ref-4"
           />
+
+          <br/><br/>
+
+          <ReferenceList
+            headerOffset={72} // ajuste conforme a altura do seu header fixo
+            references={[
+              {
+                text:
+                  "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
+                targetId: "ref-3",  
+                sourceId: "source-3" 
+              },
+              {
+                text:
+                  "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
+                targetId: "ref-4",   
+                sourceId: "source-4"
+              },
+            ]}
+          />
+
+
         </div>
-
-        <br /><br />
-
-        <ReferenceInfoBox
-          id="source-4"
-          quote={`“O espaço na EaD está ligado ao fato de não ser necessária a utilização do mesmo espaço físico, de forma simultânea, por alunos, tutores e professores, para que os processos de ensino e de aprendizagem aconteçam. Os espaços de encontros se multiplicam e se subdividem. Professores, tutores e alunos comunicam-se em um ambiente de interação síncrona ou assíncrona, com a utilização de recursos tecnológicos, sem barreiras espaciais ou temporais. Um dos espaços mais utilizados em EaD é a sala de aula virtual, materializada pelo AVA. A presença do aluno se faz por meio das atividades e de estudos propostos pelo curso.“`}
-          reference="Referência 4"
-          targetId="ref-4"
-        />
-
-        <ReferenceList
-          headerOffset={72} // ajuste conforme a altura do seu header fixo
-          references={[
-            {
-              text:
-                "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
-              targetId: "ref-3",  
-              sourceId: "source-3" 
-            },
-            {
-              text:
-                "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
-              targetId: "ref-4",   
-              sourceId: "source-4"
-            },
-          ]}
-        />
 
     </MainLayout>
   );

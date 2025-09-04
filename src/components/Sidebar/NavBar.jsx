@@ -8,7 +8,6 @@ import UseScrollProgress from "../BarProgress/useScrollProgress";
 
 const modules = [
   { title: "Módulo 1", items: ["Metodologia de Estudo na Educação a Distância"] },
-  { title: "Cronograma", items: ["EM BREVE"] },
 ];
 
 function NavBar({ sidebar, setSidebar }) {

@@ -107,6 +107,8 @@ function Module_01_02() {
           ]}
         />
 
+        <MobileBottomBar to="/module_01_03_01" text="Próximo" />
+
     </MainLayout>
   );
 }
