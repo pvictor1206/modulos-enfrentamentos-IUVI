@@ -36,22 +36,25 @@ function Module_01_04() {
         
         <div className="hidden md:flex justify-between items-center px-[2%] mt-4">
           {/* Botão Voltar */}
-          <div className="flex items-center gap-4">
-            <Link to="/module_01_03_02">
-              <AiOutlineLeft className="w-[20px] h-[20px] text-slate-500" />
-            </Link>
+          <Link to="/module_01_03_02" className="flex items-center gap-3">
+            {/* Seta à esquerda */}
+            <AiOutlineLeft className="w-[20px] h-[20px] text-slate-500" />
+
+            {/* Ícone */}
             <img
               src="/Task List Pin Streamline Ultimate Regular - Free.png"
               alt=""
               className="w-[40px] h-[40px]"
             />
-            <div>
-              <div className="text-[14px] font-semibold text-left">Voltar</div>
+
+            {/* Texto */}
+            <div className="text-left">
+              <div className="text-[14px] font-semibold">Voltar</div>
               <div className="text-[14px]">
                 Metodologia de Estudo na Educação a Distância - #1.3.2
               </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
