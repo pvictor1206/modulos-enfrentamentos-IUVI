@@ -11,7 +11,7 @@ const modules = [
 ];
 
 function NavBar({ sidebar, setSidebar }) {
-  const showSidebar = () => setSidebar(!sidebar);
+  const showSidebar = () => setSidebar(!sidebar)
 
   // % de rolagem da página
   const progresso = UseScrollProgress();

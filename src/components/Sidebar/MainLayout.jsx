@@ -3,7 +3,7 @@ import { useState } from 'react';
 import NavBar from './NavBar';
 
 function MainLayout({ children }) {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false); //Abre ou nao o menu quando inicia a página
 
   return (
     <div className="flex">

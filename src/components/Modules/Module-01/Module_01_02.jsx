@@ -17,7 +17,7 @@ function Module_01_02() {
           Metodologia de Estudo na Educação a Distância - #1.2
         </h1>
 
-        <div className="h-2 bg-[#d6cfee] rounded-b-lg mt-1 w-[calc(52vw-var(--content-left)-32px)]" /></div>
+        <div className="h-2 bg-[#d6cfee] rounded-b-lg mt-1 w-[calc(52vw-var(--content-left)-32px)] md:w-[calc(32vw-var(--content-left)-32px)]" /></div>
         
         <div className="hidden md:flex justify-between items-center px-[2%] mt-4">
           {/* Botão Voltar */}
@@ -96,12 +96,14 @@ function Module_01_02() {
           headerOffset={72} // ajuste conforme a altura do seu header fixo
           references={[
             {
+              number: 1, 
               text:
                 "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
               targetId: "ref-1",  
               sourceId: "source-1" 
             },
             {
+              number: 2, 
               text:
                 "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
               targetId: "ref-2",   
@@ -109,6 +111,8 @@ function Module_01_02() {
             },
           ]}
         />
+
+        <br/><br/><br/><br/>
 
         <MobileBottomBarBackNext
            toPrev="/module_01_01"

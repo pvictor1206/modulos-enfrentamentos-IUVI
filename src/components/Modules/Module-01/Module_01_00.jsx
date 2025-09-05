@@ -13,8 +13,7 @@ function Module_01_00() {
         <h1 className="text-left font-semibold text-[20px] md:text-[25px]">
           Metodologia de Estudo na Educação a Distância - #1.0
         </h1>
-
-        <div className="h-2 bg-[#d6cfee] rounded-b-lg mt-1 w-[calc(52vw-var(--content-left)-32px)]" /></div>
+        <div className="h-2 bg-[#d6cfee] rounded-b-lg mt-1 w-[calc(52vw-var(--content-left)-32px)] md:w-[calc(32vw-var(--content-left)-32px)]" /></div>
         
         <div className="hidden md:block pr-[2%]">
           <div className="mt-3 ml-auto w-full max-w-[460px] pt-[5px]">

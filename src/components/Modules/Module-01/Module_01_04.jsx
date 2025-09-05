@@ -1,13 +1,9 @@
 import MainLayout from "../../Sidebar/MainLayout";
 import { Link } from 'react-router-dom';
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
-import MobileBottomBar from "../../Mobile/MobileBottomBar";
-import QuestionnairePrompt from "../../QuestionnairePrompt/QuestionnairePrompt ";
+import MobileBottomBarBackNext from "../../Mobile/MobileBottomBarBackNext";
 import ReferenceInfoBox from "../../ReferenceInfoBox/ReferenceInfoBox";
 import ReferenceList from "../../ReferenceInfoBox/ReferenceList";
-import AccessLink from "../../AccessLink/AccessLink"
-import DropdownContent from "../../DropdownContent/DropdownContent";
-import UseScrollProgress from "../../BarProgress/useScrollProgress";
 import ComparisonTable from "../../Table/ComparisonTable";
 
 function Module_01_04() {
@@ -32,7 +28,7 @@ function Module_01_04() {
           Metodologia de Estudo na Educação a Distância - #1.4
         </h1>
 
-        <div className="h-2 bg-[#d6cfee] rounded-b-lg mt-1 w-[calc(52vw-var(--content-left)-32px)]" /></div>
+        <div className="h-2 bg-[#d6cfee] rounded-b-lg mt-1 w-[calc(52vw-var(--content-left)-32px)] md:w-[calc(32vw-var(--content-left)-32px)]" /></div>
         
         <div className="hidden md:flex justify-between items-center px-[2%] mt-4">
           {/* Botão Voltar */}
@@ -88,12 +84,14 @@ function Module_01_04() {
             headerOffset={72} // ajuste conforme a altura do seu header fixo
             references={[
               {
+                number: 3, 
                 text:
                   "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
                 targetId: "ref-3",  
                 sourceId: "source-3" 
               },
               {
+                number: 4, 
                 text:
                   "Metodologia da aprendizagem em EAD [recurso eletrônico] / autores: Adriana Soares Pereira - [et. al.]. - 1. ed. - Santa Maria, RS : UFSM, NTE, 2017. 1 e-book : il.",
                 targetId: "ref-4",   
@@ -101,9 +99,16 @@ function Module_01_04() {
               },
             ]}
           />
-
-
         </div>
+
+        <br/><br/><br/><br/>
+
+        <MobileBottomBarBackNext
+           toPrev="/module_01_03_02"
+           toNext=""
+           textPrev="Anterior"
+           textNext=""
+        />
 
     </MainLayout>
   );
