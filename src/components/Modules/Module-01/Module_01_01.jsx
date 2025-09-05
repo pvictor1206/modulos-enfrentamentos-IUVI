@@ -65,9 +65,6 @@ function Module_01_01() {
 
         <hr className="border-0 h-px bg-[#F4F2FF] my-4" />
 
-
-        
-
         <p className="text-justify lg:pr-[18%] lg:pl-[170px]">
         <h2 className="text-left font-semibold text-[20px] py-[25px] md:py-[50px]">
           Responda ao questionário

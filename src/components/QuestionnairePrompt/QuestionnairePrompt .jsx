@@ -19,8 +19,8 @@ export default function QuestionnairePrompt({
       >
         <p
           className="
-            text-[#0C1E33] font-semibold text-center break-words whitespace-pre-line
-            text-[16px] sm:text-base md:text-lg leading-relaxed
+            text-[#0C1E33] font-semibold text-center break-words
+            text-[14px] sm:text-base md:text-lg leading-relaxed
           "
         >
           {message}

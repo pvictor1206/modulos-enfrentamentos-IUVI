@@ -71,6 +71,7 @@ function Module_01_03_01() {
         <h2 className="text-left font-semibold text-[20px] py-[25px] md:py-[50px]">
           Tempo e Disciplina
         </h2>
+        
           {conteudoJSON.paragrafo_m03_01.map((texto, index) => (
             <div key={index}>
               <p

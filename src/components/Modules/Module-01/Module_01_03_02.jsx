@@ -4,14 +4,19 @@ import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import MobileBottomBar from "../../Mobile/MobileBottomBar";
 import conteudoJSON from '../../../assets/conteudo_textos_03.json';
 import { Link } from 'react-router-dom';
-import QuestionnairePrompt from "../../QuestionnairePrompt/QuestionnairePrompt ";
-import ReferenceInfoBox from "../../ReferenceInfoBox/ReferenceInfoBox";
-import AccessLink from "../../AccessLink/AccessLink"
-import DropdownContent from "../../DropdownContent/DropdownContent";
-import UseScrollProgress from "../../BarProgress/useScrollProgress";
+import VideoEmbed from "../../Video/VideoEmbed";
 
 
 function Module_01_03_02() {
+
+  const YT_VIDEO_1 = "rMNlOc7mbOs";
+  const YT_VIDEO_2 = "mpCNf9Bv8iA";
+  const YT_VIDEO_3 = "G5P7J7Op790";
+  const YT_VIDEO_4 = "Ll6-JFQzz-Y";
+  const YT_VIDEO_5 = "Lcn7PmW_H-8";
+  const YT_VIDEO_6 = "IuXUi09VYec";
+  const YT_VIDEO_7 = "jNz8TX38LyM";
+
   return (
     <MainLayout>
       
@@ -67,14 +72,53 @@ function Module_01_03_02() {
         <h2 className="text-left font-semibold text-[20px] py-[25px] md:py-[50px]">
           Participação
         </h2>
-          {conteudoJSON.paragrafo_m03_02.map((texto, index) => (
-              <p
-                key={index}
-                className="text-[16px] leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: texto }}
-              />
-            ))}
+
+            {conteudoJSON.paragrafo_m03_02.map((texto, index) => (
+               <div key={index}>
+                  <p
+                      className="text-[16px] leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: texto }}
+                  />
+            
+                  {/* Vídeo após o item 3 (index 2) */}
+                  {index === 0 && (
+                      <VideoEmbed videoId={YT_VIDEO_1} title="Interações" />
+                  )}
+            
+                  {index === 1 && (
+                     <VideoEmbed videoId={YT_VIDEO_2} title="Cronograma" />
+                  )}
+            
+                  {index === 2 && (
+                     <VideoEmbed videoId={YT_VIDEO_3} title="Expresse" />
+                  )}
+
+                  {index === 5 && (
+                     <VideoEmbed videoId={YT_VIDEO_4} title="Escrita" />
+                  )}
+
+                  {index === 8 && (
+                     <VideoEmbed videoId={YT_VIDEO_5} title="Textos" />
+                  )}
+
+                  {index === 9 && (
+                     <VideoEmbed videoId={YT_VIDEO_6} title="Textos" />
+                  )}
+
+                  {index === 10 && (
+                     <VideoEmbed videoId={YT_VIDEO_7} title="Textos" />
+                  )}
+
+
+                  
+            
+                  
+              </div>
+           ))}
         </p>
+        <br/><br/>
+        <br/><br/>
+        <br/><br/>
 
     </MainLayout>
   );
