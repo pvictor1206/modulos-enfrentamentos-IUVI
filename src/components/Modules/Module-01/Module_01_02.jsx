@@ -27,7 +27,7 @@ function Module_01_02() {
 
             {/* Ícone */}
             <img
-              src="/Task List Pin Streamline Ultimate Regular - Free.png"
+              src="src/assets/Task List Pin Streamline Ultimate Regular - Free.png"
               alt=""
               className="w-[40px] h-[40px]"
             />
@@ -53,7 +53,7 @@ function Module_01_02() {
 
             {/* Ícone */}
             <img
-              src="/Task List Pin Streamline Ultimate Regular - Free.png"
+              src="src/assets/Task List Pin Streamline Ultimate Regular - Free.png"
               alt=""
               className="w-[40px] h-[40px]"
             />
