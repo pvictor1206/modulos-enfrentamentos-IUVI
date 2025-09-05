@@ -1,14 +1,11 @@
 import MainLayout from "../../Sidebar/MainLayout";
 import { Link } from 'react-router-dom';
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
-import MobileBottomBar from "../../Mobile/MobileBottomBar";
+import MobileBottomBarBackNext from "../../Mobile/MobileBottomBarBackNext";
 import conteudoJSON from '../../../assets/conteudo_textos_02.json';
-import QuestionnairePrompt from "../../QuestionnairePrompt/QuestionnairePrompt ";
 import ReferenceInfoBox from "../../ReferenceInfoBox/ReferenceInfoBox";
 import ReferenceList from "../../ReferenceInfoBox/ReferenceList";
-import AccessLink from "../../AccessLink/AccessLink"
-import DropdownContent from "../../DropdownContent/DropdownContent";
-import UseScrollProgress from "../../BarProgress/useScrollProgress";
+
 
 function Module_01_02() {
 
@@ -107,7 +104,12 @@ function Module_01_02() {
           ]}
         />
 
-        <MobileBottomBar to="/module_01_03_01" text="Próximo" />
+        <MobileBottomBarBackNext
+           toPrev="/module_01_01"
+           toNext="/module_01_03_01"
+           textPrev="Anterior"
+           textNext="Próximo"
+       />
 
     </MainLayout>
   );

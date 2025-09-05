@@ -1,7 +1,7 @@
 // Module_01_01.jsx
 import MainLayout from "../../Sidebar/MainLayout";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
-import MobileBottomBar from "../../Mobile/MobileBottomBar";
+import MobileBottomBarBackNext from "../../Mobile/MobileBottomBarBackNext";
 import conteudoJSON from '../../../assets/conteudo_textos_03.json';
 import { Link } from 'react-router-dom';
 import VideoEmbed from "../../Video/VideoEmbed";
@@ -107,7 +107,12 @@ function Module_01_03_01() {
         <br/><br/>
         <br/><br/>
         <br/><br/>
-
+        <MobileBottomBarBackNext
+            toPrev="/module_01_02"
+            toNext="/module_01_03_02"
+            textPrev="Anterior"
+            textNext="Próximo"
+        />
     </MainLayout>
   );
 }

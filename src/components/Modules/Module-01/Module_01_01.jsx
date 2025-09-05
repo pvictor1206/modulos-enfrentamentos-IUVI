@@ -1,16 +1,10 @@
 // Module_01_01.jsx
 import MainLayout from "../../Sidebar/MainLayout";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
-import MobileBottomBar from "../../Mobile/MobileBottomBar";
 import conteudoJSON from '../../../assets/conteudo_textos_01.json';
 import { Link } from 'react-router-dom';
 import QuestionnairePrompt from "../../QuestionnairePrompt/QuestionnairePrompt ";
-import ReferenceInfoBox from "../../ReferenceInfoBox/ReferenceInfoBox";
-import AccessLink from "../../AccessLink/AccessLink"
-import DropdownContent from "../../DropdownContent/DropdownContent";
-import UseScrollProgress from "../../BarProgress/useScrollProgress";
-
-
+import MobileBottomBarBackNext from "../../Mobile/MobileBottomBarBackNext";
 
 
 function Module_01_01() {
@@ -84,6 +78,13 @@ function Module_01_01() {
             vamos trabalhar.`}
           buttonLabel="RESPONDER QUESTIONÁRIO"
           href="#"
+        />
+
+        <MobileBottomBarBackNext
+          toPrev="/#"
+          toNext="/module_01_02"
+          textPrev="Anterior"
+          textNext="Próximo"
         />
 
     </MainLayout>
